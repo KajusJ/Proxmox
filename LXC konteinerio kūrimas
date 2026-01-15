@@ -23,8 +23,8 @@ Create CT
 5. CPU: 1–2
 6. RAM: 512–1024 MB
 7. Network:
-o Bridge: vmbr0
-o DHCP arba static
+ o Bridge: vmbr0
+ o DHCP arba static
 8. Start after created → Finish
 ---------------------------------------------------------------
 Paleidimas ir prisijungimas
