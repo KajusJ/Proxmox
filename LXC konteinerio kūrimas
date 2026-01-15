@@ -1,0 +1,40 @@
+Pirmojo LXC konteinerio paleidimas
+---------------------------------------------------------------
+Kodėl LXC
+• Greitas
+• Minimalūs resursai
+• Idealu: DNS, Web, Monitoring, Docker host
+---------------------------------------------------------------
+Template atsisiuntimas
+GUI:
+• Node → local → CT Templates → Templates → Download
+• Pvz.: debian-12-standard
+CLI:
+pveam update
+pveam available
+pveam download local debian-12-standard_12.2-1_amd64.tar.zst
+---------------------------------------------------------------
+LXC kūrimas per GUI
+Create CT
+1. CT ID (pvz. 100)
+2. Hostname
+3. Template
+4. Disk size (pvz. 8 GB)
+5. CPU: 1–2
+6. RAM: 512–1024 MB
+7. Network:
+o Bridge: vmbr0
+o DHCP arba static
+8. Start after created → Finish
+---------------------------------------------------------------
+Paleidimas ir prisijungimas
+GUI:
+• CT → Console
+CLI:
+pct list
+pct enter 100
+---------------------------------------------------------------
+Bazinė konfigūracija LXC viduje
+apt update && apt upgrade -y
+apt install -y curl vim htop
+---------------------------------------------------------------
